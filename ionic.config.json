@@ -1,0 +1,7 @@
+{
+  "name": "Dark-Coin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
