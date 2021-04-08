@@ -1,0 +1,22 @@
+<ion-content class="ion-text-center">
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12">
+        <h1><strong>{{ headerText }}</strong></h1>
+      </ion-col>
+      <ion-col size="12">
+        <h1>{{ contentText }}</h1>
+        <ion-spinner *ngIf="spinner" name="dots"></ion-spinner>
+        <ion-icon *ngIf="iconName !== null" [ngClass]="iconColor" [name]="iconName"></ion-icon>
+      </ion-col>
+      <ion-col size="12">
+        <h1 *ngIf="retry">Veuillez réessayer</h1>
+        <ion-spinner *ngIf="retry" name="dots"></ion-spinner>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="ion-text-center">
+  <ion-button [disabled]="buttonDisabled" [color]="buttonColor" (click)="closePopup()">{{ buttonText }}</ion-button>
+</ion-footer>

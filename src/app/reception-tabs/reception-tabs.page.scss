@@ -1,0 +1,26 @@
+ion-content {
+  ion-col {
+    height: 100px;
+  }
+
+  ion-button {
+    height: 100%;
+  }
+}
+
+ion-input {
+  margin: auto;
+  width: 75%;
+  border: 2px solid var(--ion-color-primary);
+  border-radius: 5px;
+}
+
+ion-footer {
+  ion-col {
+    display: flex;
+  }
+
+  ion-col > * {
+    margin: auto;
+  }
+}

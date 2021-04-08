@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-grid>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-button strong color="warning" fill="outline" (click)="showWaitingScan(nfcMode.refund)">
+          Remboursement
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let value of tabValue" size="6">
+        <ion-button strong size="large" fill="outline" expand="block" (click)="addValue(value)">
+          {{ value }} €
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-row class="ion-text-center">
+    <ion-col>
+      <h3>OU</h3>
+      <ion-input
+        (ionBlur)="resetValue(2)"
+        (ionChange)="inputValue != null ? addedValue = inputValue : null"
+        (keyup.enter) = "showWaitingScan(nfcMode.adding)"
+        inputmode="numeric"
+        placeholder="Entrez un montant"
+        [(ngModel)]="inputValue"
+        type="number">
+      </ion-input>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button color="danger" fill="outline" (click)="resetValue(1)">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <h2>{{ addedValue }} €</h2>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button color="success" fill="outline" (click)="showWaitingScan(nfcMode.adding)">
+          <ion-icon name="checkmark"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+

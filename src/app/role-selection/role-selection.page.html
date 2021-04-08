@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center"> Sélection du poste</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="this.appService.getSelectedEvent()">
+    <!-- On boucle sur les postes -->
+    <ion-item [button]=true
+              [color]="i%2 === 0 ? 'light': 'medium'"
+              (click)="selectRole(role)"
+              *ngFor="let role of this.appService.getSelectedEvent().roles, let i = index">
+      <ion-label class="ion-text-center" >{{ role.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

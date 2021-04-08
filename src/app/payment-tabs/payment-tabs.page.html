@@ -1,0 +1,44 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-text-center">
+      <ion-col class="col" *ngFor="let item of items" size="6">
+        <div class="item">
+          <ion-badge *ngIf="item.quantity != 0" color="primary">{{ item.quantity }}</ion-badge>
+          <ion-row>
+            <h4><strong>{{ item.item.name }}</strong> <br> {{ item.item.price }} €</h4>
+            <ion-footer>
+              <ion-row>
+                <ion-col>
+                  <ion-icon (click)="removeItem(item)" color="danger" name="remove-circle-outline"></ion-icon>
+                </ion-col>
+                <ion-col>
+                  <ion-icon (click)="addItem(item)" color="success" name="add-circle-outline"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-footer>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button color="danger" fill="outline" (click)="resetValue()">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <h2>{{ paymentValue }} €</h2>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button color="success" fill="outline" (click)="showWaitingScan(nfcMode.payment)">
+          <ion-icon name="checkmark"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

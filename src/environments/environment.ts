@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiEndpoint: 'http://192.168.1.12:3000/api',
+  secureKey : 'a212c61b572a3f74ab720060f0e833e5',
+  secureIV : 'e196268275580b8b'
 };
 
 /*

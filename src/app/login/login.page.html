@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Dark-Coin
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form style='margin-top:15%' [formGroup]="loginForm">
+    <ion-item>
+      <ion-input [color]="error==='user' ? 'danger': null"
+                 (keyup.enter)="loginFromUser()"
+                 formControlName="username"
+                 type="text"
+                 placeholder="Utilisateur"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input (keyup.enter)="loginFromUser()"
+                 formControlName="password"
+                 type="password"
+                 placeholder="Mot de passe"></ion-input>
+    </ion-item>
+    <ion-button (click)="loginFromUser()" [disabled]="!loginForm.valid" fill="outline" shape="round" expand="block" color="success">Connexion</ion-button>
+  </form>
+  <div style="text-align: center">
+    <p *ngIf="errorMessage != null">{{ errorMessage }}</p>
+  </div>
+</ion-content>

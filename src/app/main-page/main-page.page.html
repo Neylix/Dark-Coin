@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="navBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-ripple-effect></ion-ripple-effect>
+    <ion-title>{{ appService.getSelectedEvent().name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" *ngIf="!this.appService.getSelectedRole()">
+      <ion-tab-button tab="reception">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Accueil</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="payment">
+        <ion-icon name="contacts"></ion-icon>
+        <ion-label>Paiement</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

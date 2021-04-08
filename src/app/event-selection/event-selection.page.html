@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center"> Sélection de l'événement</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- On boucle sur les événements -->
+    <ion-item [button]=true
+              [color]="i%2 === 0 ? 'light': 'medium'"
+              (click)="selectEvent(event)"
+              *ngFor="let event of this.appService.getEvents(), let i = index">
+      <ion-label class="ion-text-center" >{{ event.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
