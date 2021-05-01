@@ -66,7 +66,7 @@ export class BackendService {
   getCompanyEvents(companyId: number): Promise<Event[]> {
     return new Promise<Event[]>((resolve, reject) => {
 
-      const uri = environment.apiEndpoint + '/company/' + companyId + '/events';
+      const uri = environment.apiEndpoint + '/company/events';
 
       Http.request({
         method: 'GET',
