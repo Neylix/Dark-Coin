@@ -1,14 +1,1 @@
-{
-  "appId": "io.ionic.starter",
-  "appName": "Dark-Coin",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "www",
-  "plugins": {
-    "SplashScreen": {
-      "androidScaleType": "CENTER_CROP",
-      "launchAutoHode": false
-    }
-  },
-  "cordova": {}
-}
+{}

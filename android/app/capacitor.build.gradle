@@ -10,6 +10,10 @@ android {
 apply from: "../capacitor-cordova-android-plugins/cordova.variables.gradle"
 dependencies {
     implementation project(':capacitor-community-http')
+    implementation project(':capacitor-app')
+    implementation project(':capacitor-haptics')
+    implementation project(':capacitor-splash-screen')
+    implementation project(':capacitor-status-bar')
 
 }
 apply from: "../../node_modules/cordova-plugin-aes256-encryption/src/android/plugin.gradle"

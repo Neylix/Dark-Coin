@@ -3,10 +3,8 @@ import { NfcService } from '../services/nfc.service';
 import { AppService } from '../services/app.service';
 import { Subscription } from 'rxjs';
 import { ModalController, Platform } from '@ionic/angular';
-import { Plugins } from '@capacitor/core';
 import { NfcMode } from '../classes/nfcMode';
-
-const{ Haptics } = Plugins;
+import { Haptics } from '@capacitor/haptics';
 
 @Component({
   selector: 'app-waiting-scan',

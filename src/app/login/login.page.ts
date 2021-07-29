@@ -2,10 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { AppService } from '../services/app.service';
 import { LoadingController } from '@ionic/angular';
-import { Plugins, PluginListenerHandle } from '@capacitor/core';
+import { PluginListenerHandle } from '@capacitor/core';
 import { Router } from '@angular/router';
-
-const { App } = Plugins;
+import { App } from '@capacitor/app';
 
 @Component({
   selector: 'app-login',
@@ -35,8 +34,8 @@ export class LoginPage implements OnInit {
     });
   }
 
-  ngOnInit() {
-    this.backEvent = App.addListener('backButton', () => {
+  async ngOnInit() {
+    this.backEvent = await App.addListener('backButton', () => {
       App.exitApp();
     });
   }
@@ -45,9 +44,9 @@ export class LoginPage implements OnInit {
     this.backEvent.remove();
   }
 
-  ionViewDidEnter() {
+  async ionViewDidEnter() {
     this.backEvent.remove();
-    this.backEvent = App.addListener('backButton', () => {
+    this.backEvent = await App.addListener('backButton', () => {
       App.exitApp();
     });
   }

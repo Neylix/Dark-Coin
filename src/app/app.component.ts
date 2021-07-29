@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
-import { Plugins, StatusBarStyle} from '@capacitor/core';
-
-const { SplashScreen } = Plugins;
-const { StatusBar } = Plugins;
+import { SplashScreen } from '@capacitor/splash-screen';
+import { StatusBar, Style } from '@capacitor/status-bar';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +18,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      StatusBar.setStyle({style: StatusBarStyle.Dark});
+      StatusBar.setStyle({style: Style.Dark});
 
       this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.NFC).then(
         result => console.log('Has permission?', result.hasPermission),
