@@ -13,12 +13,12 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "~13.0.3",
-    "@angular/core": "~13.0.3",
-    "@angular/forms": "~13.0.3",
-    "@angular/platform-browser": "~13.0.3",
-    "@angular/platform-browser-dynamic": "~13.0.3",
-    "@angular/router": "~13.0.3",
+    "@angular/common": "~12.1.5",
+    "@angular/core": "~12.1.5",
+    "@angular/forms": "~12.1.5",
+    "@angular/platform-browser": "~12.1.5",
+    "@angular/platform-browser-dynamic": "~12.1.5",
+    "@angular/router": "~12.1.5",
     "@capacitor-community/http": "^1.4.1",
     "@capacitor/android": "^3.3.2",
     "@capacitor/app": "^1.0.6",
@@ -33,18 +33,18 @@
     "cordova-plugin-aes256-encryption": "^2.0.1",
     "cordova-plugin-android-permissions": "^1.1.2",
     "phonegap-nfc": "^1.2.0",
-    "rxjs": "^7.4.0",
+    "rxjs": "^6.6.7",
     "tslib": "^2.3.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.0.4",
-    "@angular/cli": "~13.0.4",
-    "@angular/compiler": "~13.0.3",
-    "@angular/compiler-cli": "~13.0.3",
-    "@angular/language-service": "~13.0.3",
+    "@angular-devkit/build-angular": "~12.1.4",
+    "@angular/cli": "~12.1.4",
+    "@angular/compiler": "~12.1.5",
+    "@angular/compiler-cli": "~12.1.5",
+    "@angular/language-service": "~12.1.5",
     "@capacitor/cli": "^3.3.2",
-    "@ionic/angular-toolkit": "^5.0.3",
+    "@ionic/angular-toolkit": "^5.0.0",
     "@types/jasmine": "~3.10.2",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^16.11.11",
@@ -60,7 +60,7 @@
     "karma-jasmine-html-reporter": "^1.7.0",
     "protractor": "~7.0.0",
     "ts-node": "~10.4.0",
-    "typescript": "4.5.2"
+    "typescript": "4.3.2"
   },
   "description": "NFC Wristband payment app"
 }
