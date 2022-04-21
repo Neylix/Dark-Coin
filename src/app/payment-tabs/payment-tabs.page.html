@@ -2,20 +2,32 @@
   <ion-grid>
     <ion-row class="ion-text-center">
       <ion-col class="col" *ngFor="let item of items" size="6">
-        <div class="item">
-          <ion-badge *ngIf="item.quantity != 0" color="primary">{{ item.quantity }}</ion-badge>
+        <div class="selling-item {{ item.updated ? 'updated' : 'normal' }}">
+          <ion-badge
+            class="quantity-badge" 
+            *ngIf="item.quantity != 0" 
+            color="primary">
+            {{ item.quantity }}
+          </ion-badge>
+          <ion-icon
+            class="update-icon"
+            name="create"
+            color="{{ item.updated ? 'warning' : 'medium' }}"
+            (click)="updateItemPrice(item)">
+          </ion-icon>
+          <h4> {{ item.item.name }} </h4>
+          <h4> {{ item.item.price }} €
+            <span class="updated">
+              {{ item.updatedPrice }} €
+            </span>
+          </h4>
           <ion-row>
-            <h4><strong>{{ item.item.name }}</strong> <br> {{ item.item.price }} €</h4>
-            <ion-footer>
-              <ion-row>
-                <ion-col>
-                  <ion-icon (click)="removeItem(item)" color="danger" name="remove-circle-outline"></ion-icon>
-                </ion-col>
-                <ion-col>
-                  <ion-icon (click)="addItem(item)" color="success" name="add-circle-outline"></ion-icon>
-                </ion-col>
-              </ion-row>
-            </ion-footer>
+            <ion-col>
+              <ion-icon (click)="removeItem(item)" color="danger" name="remove-circle-outline"></ion-icon>
+            </ion-col>
+            <ion-col>
+              <ion-icon (click)="addItem(item)" color="success" name="add-circle-outline"></ion-icon>
+            </ion-col>
           </ion-row>
         </div>
       </ion-col>

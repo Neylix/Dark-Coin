@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'http://192.168.42.148:3000/api',
+  apiEndpoint: 'http://192.168.1.233:3001/api',
   secureKey : 'a212c61b572a3f74ab720060f0e833e5',
   secureIV : 'e196268275580b8b'
 };

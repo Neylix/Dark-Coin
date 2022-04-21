@@ -58,7 +58,6 @@ export class EventSelectionPage {
     if (!this.alert) {
       this.alert = await this.alertController.create({
         header: 'Se déconnecter ?',
-        mode: 'ios',
         buttons: [
           {
             text: 'Oui',

@@ -1,8 +1,11 @@
-.item {
+.selling-item {
   width: 100%;
   height: 100%;
   border: 2px solid var(--ion-color-primary);
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   h4 {
     margin: 5px auto 5px auto;
@@ -22,17 +25,29 @@
 
   ion-badge {
     position: absolute;
+    font-size: 1.2em;
     top: 0;
     right: 0;
-    font-size: 1.2em;
   }
 
-  ion-row {
-    height: 100%;
+  .update-icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.3em;
   }
 
-  .text {
-    font-size: 1.2em;
+  &.updated {
+    border: 2px solid var(--ion-color-warning);
+  }
+
+  .updated {
+    color: var(--ion-color-warning);
+    display: none
+  }
+
+  &.updated .updated {
+    display: block
   }
 }
 

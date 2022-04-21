@@ -35,6 +35,76 @@ export class AppService {
   }
 
   getSelectedEvent(): Event {
+    if (!this.selectedEvent) {
+      this.selectedEvent = {
+        "beginingDate": null,
+        "endingDate": null,
+        "uniqueId": 1,
+        "companyId": 1,
+        "name": "Test",
+        "items": [
+          {
+              "uniqueId": 3,
+              "eventId": 1,
+              "name": "Sandwich",
+              "price": 4
+          },
+          {
+              "uniqueId": 7,
+              "eventId": 1,
+              "name": "Onion Rings",
+              "price": 3.5
+          },
+          {
+              "uniqueId": 8,
+              "eventId": 1,
+              "name": "Un bon gros Kebab",
+              "price": 5
+          },
+          {
+              "uniqueId": 10,
+              "eventId": 1,
+              "name": "Maintenant on sait ce que c'est ce produit",
+              "price": 6569
+          },
+          {
+              "uniqueId": 144,
+              "eventId": 1,
+              "name": "Un article très chère mais moins que le précédent",
+              "price": 200
+          },
+          {
+              "uniqueId": 174,
+              "eventId": 1,
+              "name": "lol",
+              "price": 4
+          }
+      ],
+      "roles": [
+          {
+              "uniqueId": 2,
+              "event": null,
+              "name": "Accueil",
+              "fonction": "rechargement",
+              "items": []
+          },
+          {
+              "uniqueId": 1,
+              "event": null,
+              "name": "Bar",
+              "fonction": "paiement",
+              "items": []
+          },
+          {
+              "uniqueId": 3,
+              "event": null,
+              "name": "Merch",
+              "fonction": "paiement",
+              "items": []
+          }
+      ]
+    }
+    }
     return this.selectedEvent;
   }
 

@@ -27,7 +27,7 @@
         (ionBlur)="resetValue(2)"
         (ionChange)="inputValue != null ? addedValue = inputValue : null"
         (keyup.enter) = "showWaitingScan(nfcMode.adding)"
-        inputmode="numeric"
+        inputmode="decimal"
         placeholder="Entrez un montant"
         [(ngModel)]="inputValue"
         type="number">
